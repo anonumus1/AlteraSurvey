@@ -8,41 +8,7 @@
   <!-- Simple Bootstrap for clean layout -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    body {
-      background: #f7f9fc;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .header h1 {
-      font-size: 1.8rem;
-      color: #333;
-    }
-    .footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 40px;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 4px;
-      margin-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 
@@ -55,54 +21,106 @@
 
     <!-- Question 1 -->
     <div class="mb-4">
-      <h5>1. What do you think of the UI in this site?</h5>
-      <img src="http://Provigo.ca" alt="Provigo home page screenshot">
+      <h5>What do you think of the UI in
+        <a href="https://www.altera.com/">altera.com</a>
+      ?</h5>
+      <div class="gallery">
+        <a class="img-zoom" href="https://www.altera.com/">
+          <img src="./image/home.png" alt="Homepage">
+          <p>Homepage</p>
+        </a>
+
+        <a class="img-zoom" href="https://www.altera.com/asap/find-partners">
+          <img src="./image/search.png" alt="Search page">
+          <p>Search Page</p>
+        </a>
+
+        <a class="img-zoom" href="https://www.altera.com/company/overview">
+          <img src="./image/about.png" alt="About page">
+          <p>About Page</p>
+        </a>
+
+        <a class="img-zoom" href="https://www.altera.com/contact">
+          <img src="./image/contactUs.png" alt="Contact Us page">
+          <p>Contact Us Page</p>
+        </a>
+      </div>
     </div>
 
-    <!-- Personal Info -->
+    <!-- Impression -->
     <form>
 
       <div class="mb-3">
-        <label for="firstName" class="form-label">First name:</label>
-        <input type="text" id="firstName" class="form-control">
+        <label for="impression" class="form-label">1. What was your first impression of the Altera homepage layout?</label>
+        <input type="text" id="impression" class="form-control">
       </div>
 
+      <!-- Products Search -->
       <div class="mb-3">
-        <label for="lastName" class="form-label">Last name:</label>
-        <input type="text" id="lastName" class="form-control">
+        <p>2. How easy was it to find the 'Products' section?</p>
+
+        <label class="radio-item">
+          <input type="radio" name="color" value="veryEasy">
+          Very Easy
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="color" value="easy">
+          Easy
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="color" value="neutral">
+          Neutral
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="color" value="difficult">
+          Difficult
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="color" value="veryDifficult">
+          Very Difficult
+        </label>
       </div>
 
-      <!-- What you like -->
+      <!-- Professional Category -->
       <div class="mb-3">
-        <h5>2. What do you like?</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="likeRed">
-          <label class="form-check-label" for="likeRed">Red</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="likeGreen">
-          <label class="form-check-label" for="likeGreen">Green</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="likeBlue">
-          <label class="form-check-label" for="likeBlue">Blue</label>
-        </div>
-      </div>
-
-      <!-- Favorite Fruit -->
-      <div class="mb-3">
-        <h5>3. What is your favorite fruit?</h5>
+        <h5>3. Which professional category best describes you?</h5>
         <select class="form-select">
           <option value="">Select one…</option>
-          <option value="Apples">Apples</option>
-          <option value="Oranges">Oranges</option>
-          <option value="Bananas">Bananas</option>
+          <option value="engineer">Engineer</option>
+          <option value="student">Student</option>
+          <option value="researcher">Researcher</option>
+          <option value="other">Other</option>
         </select>
+      </div>
+
+      <!-- UI elements -->
+      <div class="mb-3">
+        <h5>4. Which UI elements do you find effective on this site? </h5>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="veryEasy">
+          <label class="form-check-label" for="menu">Navigation Menu</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="easy">
+          <label class="form-check-label" for="search">Search Bar</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="neutral">
+          <label class="form-check-label" for="images">High-quality Images</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="difficult">
+          <label class="form-check-label" for="color">Color Scheme</label>
+        </div>
       </div>
 
       <!-- Comments -->
       <div class="mb-3">
-        <label for="comments" class="form-label">Comments:</label>
+        <label for="comments" class="form-label">5. Any additional suggestions for improving the Altera user interface?</label>
         <textarea id="comments" class="form-control" rows="4"></textarea>
       </div>
 
@@ -110,11 +128,10 @@
     </form>
 
     <div class="footer">
-      Site created by Caroline Barrière
+      Site created by Pierre Georges and Eknoor Goraya
     </div>
 
   </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
