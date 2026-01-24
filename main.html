@@ -26,22 +26,22 @@
       ?</h5>
       <div class="gallery">
         <a class="img-zoom" href="https://www.altera.com/">
-          <img src="./image/home.png" alt="Homepage">
+          <img src="./img/home.png" alt="Homepage">
           <p>Homepage</p>
         </a>
 
         <a class="img-zoom" href="https://www.altera.com/asap/find-partners">
-          <img src="./image/search.png" alt="Search page">
+          <img src="./img/search.png" alt="Search page">
           <p>Search Page</p>
         </a>
 
         <a class="img-zoom" href="https://www.altera.com/company/overview">
-          <img src="./image/about.png" alt="About page">
+          <img src="./img/about.png" alt="About page">
           <p>About Page</p>
         </a>
 
         <a class="img-zoom" href="https://www.altera.com/contact">
-          <img src="./image/contactUs.png" alt="Contact Us page">
+          <img src="./img/contactUs.png" alt="Contact Us page">
           <p>Contact Us Page</p>
         </a>
       </div>
@@ -51,10 +51,10 @@
     <form>
       
       <div class="mb-3">
-        <label for="impression" class="form-label">First Name</label>
-        <input type="text" id="impression" class="form-control">
-        <label for="impression" class="form-label">Last Name</label>
-        <input type="text" id="impression" class="form-control">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" id="firstName" class="form-control">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" id="lastName" class="form-control">
       </div>
 
       <div class="mb-3">
@@ -108,21 +108,27 @@
       <div class="mb-3">
         <h5>4. Which UI elements do you find effective on this site? </h5>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="veryEasy">
+          <input class="form-check-input" type="checkbox" id="menu">
           <label class="form-check-label" for="menu">Navigation Menu</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="easy">
+          <input class="form-check-input" type="checkbox" id="search">
           <label class="form-check-label" for="search">Search Bar</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="neutral">
+          <input class="form-check-input" type="checkbox" id="images">
           <label class="form-check-label" for="images">High-quality Images</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="difficult">
+          <input class="form-check-input" type="checkbox" id="color">
           <label class="form-check-label" for="color">Color Scheme</label>
         </div>
+      </div>
+
+      <!-- Comments -->
+      <div class="mb-3">
+        <label for="comments" class="form-label">5. Any additional suggestions for improving the Altera user interface?</label>
+        <textarea id="comments" class="form-control" rows="4"></textarea>
       </div>
 
       <!-- Rating -->
@@ -130,12 +136,6 @@
         <label for="rating">6. On a scale of 1-10, how would you rate the responsiveness of the site?</label><br>
         <input type="range" id="rating" name="rating" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value">
         <output>5</output>
-      </div>
-
-      <!-- Comments -->
-      <div class="mb-3">
-        <label for="comments" class="form-label">5. Any additional suggestions for improving the Altera user interface?</label>
-        <textarea id="comments" class="form-control" rows="4"></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary w-100">Submit Questionnaire</button>
